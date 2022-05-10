@@ -1,0 +1,221 @@
+@media(max-width:1000px){
+    .navbar .container{
+        max-width: 100%;
+    }
+
+    .page_link_wrap a{
+        margin: 0 10px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .desktop_show {
+        display: none !important;
+    }
+
+    .mb_show {
+        display: block;
+    }
+
+    #fullpage {
+        padding-top: 0px;
+    }
+
+    /* nav */
+    nav {
+        width: 100%;
+        transform: translateX(-100%);
+        background: rgba(32, 32, 32, 0.9);
+    }
+
+    .navbar {
+        height: 50px;
+        border-bottom: none;
+        padding: 0.5rem 10px;
+        background-color: #0b3b50;
+    }
+
+    .navbar .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .navbar div.logo {
+        text-align: center;
+    }
+
+    .navbar div.logo img {
+        height: 25px;
+    }
+
+    .icon_wrap a {
+        color: #fefefe;
+        padding: 0 5px;
+    }
+
+    .menu {
+        margin-top: 5px;
+        width: 2rem;
+    }
+
+    .menu_txt {
+        display: none;
+    }
+
+    nav ul {
+        padding-left: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    /* nav end */
+
+    /* banner */
+    .banner .banner_txt {
+        left: 5%;
+        top: 20%;
+        width: 90%;
+        transform: unset;
+        margin: 10px auto;
+    }
+
+    .banner .banner_txt .title {
+        text-align: center;
+    }
+
+    /* banner end */
+
+    /* main_cnt */
+    .main_cnt {
+        padding: 10px 0;
+    }
+
+    .main_cnt .service_block {
+        width: 90%;
+    }
+
+    .icon_group,
+    .about_group,
+    .price_group {
+        padding: 0;
+    }
+
+    /* 關於我們 */
+    .about_group {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        flex-direction: column;
+    }
+
+    .about_group .icon_item {
+        width: 100%;
+    }
+
+    .about_group .icon_item .icon_img {
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    /* 價目表 */
+    .price_table .table_title {
+        display: none;
+    }
+
+    .price_table .table_body .body_item {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .price_table .table_body .body_item .body_col {
+        width: 100%;
+        max-width: 300px;
+        padding: 5px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .price_table .table_body .body_item .body_col .m_title {
+        color: #008EAD;
+        font-weight: bold;
+        width: 120px;
+    }
+
+    /* main_cnt end */
+
+    /* footer */
+    footer .ft_logo {
+        display: flex;
+        align-items: center;
+    }
+
+    footer .ft_menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* footer end */
+}
+
+@media(max-width: 380px) {
+
+    /* nav */
+    .navbar {
+        height: 40px;
+    }
+
+    .icon_wrap {
+        font-size: 1.0rem;
+    }
+
+    .icon_wrap a {
+        color: #fefefe;
+        padding: 0 5px;
+    }
+
+    .menu {
+        height: 1.2rem;
+    }
+
+    .menu_txt {
+        margin-top: 15px;
+    }
+
+    /* nav end */
+}
+
+
+@media(max-width: 360px) {
+
+    /* nav */
+    .navbar div.logo img {
+        height: 20px;
+    }
+
+    /* .icon_wrap {
+        font-size: 0.8rem;
+    } */
+
+    .icon_wrap a {
+        color: #fefefe;
+        padding: 0 5px;
+    }
+
+    .icon_buffer {
+        height: 10px;
+    }
+
+    .menu {
+        height: 1.2rem;
+    }
+
+    .menu_txt {
+        margin-top: 15px;
+    }
+
+    /* nav end */
+}

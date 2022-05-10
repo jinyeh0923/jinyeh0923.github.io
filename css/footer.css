@@ -1,0 +1,219 @@
+a {
+    color: #444;
+    font-weight: 300;
+}
+
+a:hover {
+    color: #222;
+    text-decoration: none;
+}
+
+.copyright {
+    margin-top: 30px;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+}
+
+footer {
+    margin-top: 50vh;
+    padding-top: 0;
+    padding-bottom: 3%;
+    background-color: #f1f1f1;
+}
+
+footer:before {
+    content: '';
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/banner/bottom_before.svg);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    background-position: bottom;
+    position: absolute;
+    bottom: 99%;
+}
+
+footer .title {
+    text-align: center;
+    z-index: 11;
+    transform: translateY(-45%);
+}
+
+footer .title img {
+    width: 30%;
+    padding-bottom: 3rem;
+}
+footer .contactBox{
+    transform: translateY(-5%);
+
+}
+footer .contactBox .infoBox .item .sosial .icon a img {
+    width: 15%;
+}
+
+footer .contactBox {
+    padding: 10%;
+    color: #cccccc;
+    background-color: #7dacc0;
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+footer .contactBox:before {
+    content: '';
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    position: absolute;
+    border: 1px solid #d3d3d3;
+}
+
+footer .contactBox .title h3 {
+    color: #ffffff;
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-size: 3rem;
+    margin-bottom: 10%;
+}
+
+footer .contactBox .title h3:after {
+    content: '';
+    display: block;
+    margin: 10px auto 20px;
+    width: 50px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+footer .contactBox .infoBox .item {
+    padding-bottom: 1.3rem;
+}
+
+footer .contactBox h4 {
+    color: #ffffff;
+    font-size: 1rem;
+
+}
+
+footer .contactBox h4 span {
+    /*font-family: 'Playfair Display', 'Times New Roman', serif;*/
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+footer .contactBox h4:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+footer .contactBox p {
+    letter-spacing: 2px;
+    line-height: 1.5;
+    color: #333;
+    font-size: 1rem;
+}
+
+footer .contactBox #contact .title h4 {
+    border-bottom: 2px solid #b3a895;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+footer .contactBox:after {
+    content: '德聖建設Ｘ璞園都市更新';
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    color: #333;
+    font-size: 16px;
+    font-weight: 300;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+@media(max-width: 991px) {
+
+
+    footer:before {
+        bottom: 100%;
+        background-size: 100%;
+        background-position: bottom;
+    }
+
+    footer .contactBox h4 span {
+        font-size: 1.3rem;
+    }
+
+    footer .contactBox a span {
+        display: block;
+    }
+
+    footer .contactBox .infoBox .item .sosial .icon a span {
+        display: none;
+    }
+
+    footer .contactBox .infoBox .item .sosial .icon a img {
+        width: 20%;
+    }
+}
+
+@media(max-width: 768px) {
+
+
+    .content .Item .Txt h3.CATCH:after {
+        margin: 10px 0;
+    }
+
+    footer .contactBox .title h3 {
+        margin-bottom: 3.5rem;
+    }
+
+    footer .contactBox:after {
+        font-size: 14px;
+    }
+
+    footer .contactBox {
+        padding-bottom: 20%;
+    }
+}
+
+@media(max-width: 583px) {
+
+    footer .contactBox .title h3 {
+        font-size: 2rem;
+    }
+
+    .copyright span {
+        display: block;
+    }
+}
+
+@media(max-width: 480px) {
+
+    footer {
+        margin-top: 50vh;
+
+    }
+
+
+
+    footer .title img {
+        width: 70%;
+        padding-bottom: 2rem;
+        padding-top: 3rem;
+    }
+
+    footer .contactBox h4 span {
+        letter-spacing: 1px;
+    }
+
+
+
+
+}
