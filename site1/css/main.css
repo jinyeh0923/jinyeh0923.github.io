@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC");
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.desktop_show {
+  display: block;
+}
+
+.dis_none {
+  display: none !important;
+}
+
+.mb_show {
+  display: none;
+}
+
+a:hover {
+  color: #f48f00 !important;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  /* line-height: 2; */
+  width: 100vw;
+  background-color: #005b82;
+  background-color: #fefefe;
+  color: #4f4f4f;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif, FontAwesome;
+
+  scroll-behavior: smooth;
+}
+
+#fullpage {
+  padding-top: 70px;
+  /* padding-bottom: 5%; */
+  line-height: 2;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  display: block;
+  overflow-y: visible;
+  width: 100vw;
+  background-color: rgba(33, 33, 33, 0);
+  pointer-events: none;
+}
+
+header .logo-company {
+  display: inline-block;
+  padding: 10px;
+  height: 72px;
+  -webkit-filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+  pointer-events: auto;
+}
+
+header .logo-company img {
+  width: auto;
+  height: 40px;
+}
+
+/* nav */
+.navbar {
+  position: fixed;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  background-color: #007fad;
+  text-align: center;
+  transition: all 0.4s ease;
+  /* border-bottom: 3px solid rgb(66, 160, 201); */
+}
+
+.navbar .container {
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.menu_logo_wrap {
+  display: flex;
+}
+
+.page_link_wrap {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin-left: 30px;
+  font-size: 0.9rem;
+}
+
+.page_link_wrap div {
+  display: flex;
+  align-items: center;
+}
+
+.page_link_wrap a {
+  margin: 0 15px;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.page_link_wrap .booking_btn {
+  padding: 10px 45px;
+  border-radius: 3px;
+  background-color: #f48f00;
+}
+
+.page_link_wrap a.booking_btn:hover {
+  color: #007fad !important;
+}
+
+.icon_wrap {
+  font-size: 1.2rem;
+}
+
+.icon_wrap a {
+  padding: 0 10px;
+  width: 25px;
+  color: #fefefe;
+}
+
+.icon_buffer {
+  display: inline-block;
+  width: 2px;
+  height: 15px;
+  background-color: #fefefe;
+}
+
+.navbar div.logo {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  text-align: left;
+}
+
+.navbar div.logo img {
+  width: auto;
+  height: 35px;
+  filter: brightness(0.9);
+}
+
+.navbar div.logo img:hover {
+  filter: brightness(1.1);
+}
+
+.navbar div.logo a {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.affix {
+  display: block;
+  padding: 0;
+  background-color: #007fad;
+}
+
+/* menu */
+.menu {
+  position: relative;
+  z-index: 1;
+  margin-right: 20px;
+  padding: 0;
+  width: 2.4rem;
+  height: 1.6rem;
+  outline: 0;
+  border: 0;
+  background: 0;
+  transition: 0.1s transform linear;
+}
+
+.menu:focus {
+  outline: none;
+}
+
+.bar,
+.bar::before,
+.bar::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 0.1rem;
+  background: #fefefe;
+  content: "";
+  transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s,
+    0.2s transform linear;
+}
+
+.bar {
+  margin-top: -0.2rem;
+}
+
+.menu_txt {
+  display: inline-block;
+  margin-top: 20px;
+  color: #fefefe;
+  font-size: 0.6rem;
+}
+
+.bar::before {
+  top: -0.4rem;
+}
+
+.bar::after {
+  top: 0.4rem;
+}
+
+.bar::before,
+.bar::after {
+  transform: rotate(0deg);
+}
+
+.active .bar {
+  background: 0;
+}
+
+.active .bar::before {
+  transform: rotate(25deg);
+}
+
+.active .bar::after {
+  transform: rotate(-25deg);
+}
+
+.active .bar::before,
+.active .bar::after {
+  top: 0;
+}
+
+.active .bar,
+.active .bar::before,
+.active .bar::after {
+  transition: 0.2s background linear 0.1s, 0.2s top linear,
+    0.2s transform linear 0.2s;
+}
+
+/* menu連結 */
+nav {
+  position: fixed;
+  z-index: 6;
+  padding-top: 6.2rem;
+  width: 250px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+  transform: translateX(-251px);
+}
+
+.menu-open nav {
+  transform: translateX(0);
+}
+
+nav ul {
+  margin: 0;
+  /* padding: 0; */
+  padding-left: 20px;
+  color: #fefefe;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 15px 0;
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+}
+
+nav li a {
+  color: #fefefe;
+}
+
+nav li a:hover {
+  color: #ffff00;
+}
+
+/* nav end */
+
+/*共用區塊樣式*/
+.btn {
+  padding: 3px;
+  border-radius: 0;
+}
+
+.Img img {
+  width: 100%;
+}
+
+.icon-plus {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/icon-plus.svg);
+  opacity: 0.7;
+  transition: 0.2s all;
+}
+
+.icon-plus:hover,
+.Img:hover .icon-plus {
+  opacity: 1;
+}
+
+/*fancybox*/
+.fancybox-navigation {
+  height: 100vh;
+}
+
+.fancybox-button {
+  width: 50px;
+  height: 50px;
+}
+
+/*文字區域*/
+
+/* 置底選單 */
+.m_contactBox {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  z-index: 999;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  width: 100vw;
+  background-color: #ecb01f;
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.m_contactBox a {
+  display: inline-block;
+  padding: 10px 0;
+  width: calc(100% / 2);
+  color: #000000;
+  text-align: center;
+  font-size: 14px;
+}
+
+.m_contactBox a + a {
+  border-left: 1px solid #eeeeee;
+}
+
+/* banner */
+.banner {
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  height: 400px;
+  background-image: url(../images/bg02.jpg);
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.banner .blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner .banner_txt {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  max-width: 1200px;
+  text-align: justify;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
+.banner .banner_txt .title {
+  color: #007fad;
+  font-size: 2rem;
+  font-family: "Noto Serif TC";
+}
+
+.banner .banner_txt .desc {
+  max-width: 500px;
+  line-height: 2rem;
+}
+
+/* main content */
+.main_cnt {
+  position: relative;
+  margin: 0 auto;
+  margin-top: -75px;
+  padding: 10px 40px;
+  padding-bottom: 100px;
+  min-height: 400px;
+  max-width: 1200px;
+  width: calc(100% - 20px);
+  background-color: #ffffff;
+}
+
+.main_cnt:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 300px;
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 15%);
+  content: "";
+}
+
+.main_cnt .booking_btn {
+  display: block;
+  margin: 40px auto;
+  padding: 10px 20px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 3px;
+  background-color: #f48f00;
+  color: #ffffff;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.main_cnt .booking_btn:hover {
+  background-color: #007fad;
+  color: #ffffff !important;
+}
+
+.main_cnt .service_block {
+  margin: auto;
+  width: 75%;
+}
+
+.main_cnt .service_block .title {
+  margin: 40px 0 20px 0;
+  color: #056a81;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.main_cnt .service_block .sub_title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.main_cnt .service_block .txt {
+  color: #4f4f4f;
+  text-align: justify;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.icon_group,
+.about_group,
+.price_group {
+  padding: 40px 20px;
+  width: 100%;
+  box-shadow: inset 0px -1px 0px #f0f0f2;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+footer .footer_wrap {
+  margin: auto;
+  width: 80%;
+}
+
+footer .ft_btn_wrap {
+  display: flex;
+  padding: 40px 0;
+}
+
+footer .ft_menu {
+  margin-left: 30px;
+}
+
+footer .ft_menu a {
+  margin: 10px 20px;
+  color: #008ead;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+footer .ft_logo {
+  max-width: 120px;
+}
+
+footer .ft_logo img {
+  width: 100%;
+}
+
+footer .copyright {
+  margin: auto;
+  padding: 20px 0;
+  width: 100%;
+  border-top: 1px solid #dcdcdc;
+  color: #828282;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1100px) {
+  .navbar .container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .page_link_wrap {
+    font-size: 0.8rem;
+  }
+
+  .page_link_wrap a {
+    margin: 0 5px;
+  }
+
+  .page_link_wrap .booking_btn {
+    padding: 10px 20px;
+  }
+}

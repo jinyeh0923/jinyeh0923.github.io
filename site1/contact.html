@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>日金旅遊</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="日金旅遊">
+    <meta name="google-site-verification" content="iVnF7250yZNBF6o-k1gMVG9bgxjGMWXkICdX5jHvUGY" />
+    <!--手機解析度-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <meta property='og:image' content='https://c3.8dm.tw/tpl/c3/images/favicon.png' />
+    <!-- icon -->
+    <link rel='shortcut icon' href='https://c3.8dm.tw/tpl/c3/images/favicon.png' />
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!-- fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.1/animate.css">
+    <!-- fullpage -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js"></script>
+    <!-- swiper  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/main.css?ver=2">
+    <link rel="stylesheet" href="css/style.css?ver=2">
+    <link rel="stylesheet" href="css/mobile.css?ver=2">
+</head>
+
+<body id="body">
+    <div class="navbar">
+        <div class="container">
+            <div class="menu_logo_wrap">
+                <button class="js-menu menu mb_show" type="button">
+                    <span class="menu_txt">MENU</span>
+                    <span class="bar"></span>
+                </button>
+                <div class="logo">
+                    <a href="/site1/index.html"><img src="images/logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="page_link_wrap desktop_show">
+                <!-- insert page_link -->
+            </div>
+        </div>
+    </div>
+
+    <nav class="mb_show page_link_mb_wrap">
+        <!-- insert page_link_mb -->
+    </nav>
+
+    <div id="fullpage">
+        <!-- 表單 -->
+        <form id="contact-form" class="row flex-center-H" name="form1" method="post" action="data_act2.php" role="form"
+            onsubmit="return returnvalue" style="display: none; width: 100%; max-width: 660px;">
+            <h2 class="text-center">預約鑑賞</h2>
+            <!-- <hr> -->
+            <br>
+            <div class="form-group">
+                <input name="visitname" id="visitname" class="form-control" type="text" placeholder="您的姓名">
+            </div>
+            <div class="form-group">
+                <input name="visitmobile" id="visitmobile" class="form-control" type="tel" placeholder="行動電話">
+            </div>
+            <div class="form-group">
+                <input name="email" class="form-control contact-subject" id="email" type="email" placeholder="電子郵件" />
+                <input type="hidden" name="contact" id="contact" value="" />
+            </div>
+            <div class="form-group">
+                <select name="ok_time" id="ok_time" class="form-control">
+                    <option value="" disabled selected hidden>方便連絡時間</option>
+                    <option value="0">不限時間</option>
+                    <option value="1">早上09:00~中午12:00</option>
+                    <option value="2">中午12:00~下午1:30</option>
+                    <option value="3">下午1:30~下午5:00</option>
+                    <option value="4">晚上5:00~晚上8:00</option>
+                </select>
+            </div>
+            <div class="agree_personal_information_div">
+                <input type="checkbox" name="agree_personal_information" id="agree_personal_information"
+                    class="agree_personal_information" value="Y" onclick="check_agree_ps();" /><label
+                    for="agree_personal_information">本人已知悉『個資告知事項聲明』</label>
+            </div>
+            <div>
+                <input name="issend" type="hidden" value=".." />
+                <input name="senddata" id="send_data_button2" class="btn btn-dark btn-block" type="button"
+                    value="請同意『個資告知事項聲明』" />
+                <input name="issend" type="hidden" value=".." />
+                <input name="senddata" id="send_data_button" class="btn btn-dark btn-block" type="submit"
+                    onclick="new_sendDataCheck();" value="送出" style="display:none" />
+            </div>
+            <img src="images/info_a_mb03.jpg" alt="" class="mb_show" style="width: 100%;">
+        </form>
+    </div>
+
+    <footer>
+        <!-- insert footer -->
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/sticky.compile.js"></script>
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- <script src='https://rawgit.com/Promo/wheel-indicator/master/lib/wheel-indicator.js'></script> -->
+
+    <!-- customized -->
+    <script src="js/script.js?ver=2"></script>
+
+    <script>
+        $(".page_link_wrap").load("page_link.html");
+        $(".page_link_mb_wrap").load("page_link_mb.html");
+        $("footer").load("footer.html");
+    </script>
+</body>
+</html>
