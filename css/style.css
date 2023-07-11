@@ -1,0 +1,247 @@
+:root {
+  --animate-delay: 0.5s;
+  --animate-duration: 2s;
+  --bg-color1: #19142a;
+  --bg-color2: #2a2344;
+  --font--color: #eeeeee;
+  --main-color1: #ffe100;
+  --main-color2: #ed731c;
+  --main-color3: #d6223b;
+  --main-color4: #125ead;
+  --main-gray: #767171;
+  --note1: #e23023;
+  --sub-color1: #ed9c5f;
+  --sub-color2: #feda3e;
+  --sub-color3: #ffe699;
+  --sub-gray: #cccccc;
+}
+
+::placeholder {
+  color: var(--font--color);
+  font-size: 0.8rem;
+}
+
+:focus {
+  border: 1px solid var(--sub-color3) !important;
+}
+
+.header__area .container-fluid {
+  padding: 0;
+  width: 80%;
+  margin: auto;
+}
+
+#wrapper {
+  padding-top: 70px;
+  background-color: var(--bg-color1);
+  color: var(--font--color);
+}
+
+.section {
+  width: 80%;
+  margin: auto;
+  text-align: justify;
+}
+
+.banner {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  padding: 10rem 0 0;
+}
+
+.banner .personal_info {
+  width: 40%;
+}
+
+.banner .profile {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.profile .profile_pic {
+  width: 55%;
+  position: relative;
+}
+
+.profile img {
+  width: 100%;
+}
+
+.profile .solid_circle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--main-color3);
+  z-index: -1;
+}
+
+.section1 {
+  background-color: var(--bg-color2);
+  padding: 4rem 0;
+}
+
+.portfolio_wrap {
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.portfolio_wrap .title_btn_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio_wrap .title_btn_wrap .title {
+  width: 40%;
+  text-align: justify;
+}
+
+#filter .filter-type {
+  display: flex;
+}
+
+.portfolio_wrap .filter_btn {
+  padding: 15px 50px;
+  background-color: var(--main-color3);
+  cursor: pointer;
+}
+
+.portfolio_wrap .filter_btn:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.portfolio_wrap .filter_btn:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+#products a.one_project {
+  margin: 10px 5px;
+  min-width: calc((100% - 10px) / 4);
+  max-width: calc((100% - 30px) / 3);
+  width: calc((100% - 10px) / 4);
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+#products a.one_project .site_name {
+  display: none;
+  transition: 0.5s;
+}
+
+#products a.one_project:hover .site_name {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: var(--bg-color1);
+  z-index: 999;
+}
+
+#products a.one_project img {
+  width: 100%;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+#products a.one_project:hover img {
+  transform: scale(1.2);
+  filter: blur(2px);
+}
+
+.experience_wrap {
+  padding: 4rem 0;
+  background-color: var(--bg-color2);
+}
+
+.contact_wrap {
+  padding: 4rem 0;
+}
+
+.contact_wrap .section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_wrap .contact_info {
+  width: 30%;
+}
+
+.contact_wrap .contact_info .one_info {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.contact_wrap .contact_info .one_info .one_info_txt {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.contact_wrap .contact_info .icon_circle {
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: var(--main-color3);
+}
+
+.contact_wrap .contact_info .icon_circle i {
+  /* font-size: 20px; */
+}
+
+.contact_wrap .contact_form {
+  width: 55%;
+}
+
+.contact_wrap .contact_form form input,
+.contact_wrap .contact_form form textarea {
+  background-color: transparent;
+  padding: 15px;
+  text-indent: 5px;
+  margin: 20px 0;
+  outline: unset;
+  border-radius: 5px;
+  border: 1px solid var(--main-gray);
+  color: var(--font--color);
+  transition: 0.5s;
+}
+
+.contact_wrap .contact_form form input {
+  width: 48%;
+}
+
+.contact_wrap .contact_form form textarea {
+  width: 100%;
+}
+
+.contact_wrap .contact_form form .form_info {
+  font-size: 0.8rem;
+}
+
+.contact_wrap .contact_form form .form_info ol {
+  list-style-type: decimal;
+  color: var(--sub-gray);
+  text-align: justify;
+  margin-left: 15px;
+}
+
+.contact_wrap .contact_form form #send_data_button {
+  width: 100%;
+}
