@@ -1,0 +1,17 @@
+﻿<!-- footer -->
+<div class="footer">
+    <div class="footer_logo">
+        <a href="">
+            <picture>
+                <source media="(max-width: 991px)" srcset="img/logo6.png">
+                <img src="img/logo6.png" alt="Jin Yeh" title="Jin Yeh">
+            </picture>
+        </a>
+    </div>
+</div>
+<div class="copyright">Copyright © <span id="copyright-year"></span> Jin Yeh | All Rights Reserved</div>
+
+<script>
+    //  auto update copyright year
+    document.querySelector('#copyright-year').innerText = new Date().getFullYear();
+</script>
