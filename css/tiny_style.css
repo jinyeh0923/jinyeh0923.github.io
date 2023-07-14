@@ -5655,34 +5655,8 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url("../fonts/fa-brands-400.eot");
-  src: url("../fonts/fa-brands-400.eot#iefix") format("embedded-opentype"),
-    url("../fonts/fa-brands-400.woff2") format("woff2"),
-    url("../fonts/fa-brands-400.woff") format("woff"),
-    url("../fonts/fa-brands-400.ttf") format("truetype"),
-    url("../fonts/fa-brands-400.svg#fontawesome") format("svg");
-}
-
 .fab {
   font-family: "Font Awesome 5 Brands";
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 400;
-  font-display: auto;
-  src: url("../fonts/fa-regular-400.eot");
-  src: url("../fonts/fa-regular-400.eot#iefix") format("embedded-opentype"),
-    url("../fonts/fa-regular-400.woff2") format("woff2"),
-    url("../fonts/fa-regular-400.woff") format("woff"),
-    url("../fonts/fa-regular-400.ttf") format("truetype"),
-    url("../fonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
 .far {
@@ -5690,30 +5664,10 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 900;
-  font-display: auto;
-  src: url("../fonts/fa-solid-900.eot");
-  src: url("../fonts/fa-solid-900.eot#iefix") format("embedded-opentype"),
-    url("../fonts/fa-solid-900.woff2") format("woff2"),
-    url("../fonts/fa-solid-900.woff") format("woff"),
-    url("../fonts/fa-solid-900.ttf") format("truetype"),
-    url("../fonts/fa-solid-900.svg#fontawesome") format("svg");
-}
-
 .fa,
 .fas {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-}
-
-@font-face {
-  font-family: Material-Design-Iconic-Font;
-  src: url(../fonts/Material-Design-Iconic-Font.woff2) format("woff2"),
-    url(../fonts/Material-Design-Iconic-Font.woff) format("woff"),
-    url(../fonts/Material-Design-Iconic-Font.ttf) format("truetype");
 }
 
 .zmdi {
@@ -12567,13 +12521,6 @@ readers do not read off random characters that represent icons */
 
 .zmdi-directions:before {
   content: "\f1e7";
-}
-
-@font-face {
-  font-family: Material-Design-Iconic-Font;
-  src: url(../fonts/Material-Design-Iconic-Font.woff2) format("woff2"),
-    url(../fonts/Material-Design-Iconic-Font.woff) format("woff"),
-    url(../fonts/Material-Design-Iconic-Font.ttf) format("truetype");
 }
 
 .zmdi {
@@ -26616,7 +26563,7 @@ h6,
   }
 }
 
-/*?ð£³½???Œ§?è®›â??????- ??è????Ž°???ð¢¢Z??ð¡?é?????Šµ?ð¡?????é±?????ð¢¢Z*/
+/*?ð£³½???ï¿½ï¿½?è®›ï¿½??????- ??ï¿½ï¿½????ï¿½ï¿½???ï¿½Z??ï¿½?ï¿½ï¿½?????ï¿½ï¿½?ï¿½?????ï¿½?????ï¿½Z*/
 .rwd_table {
   margin-bottom: 1rem;
 }
@@ -26744,7 +26691,7 @@ h6,
   }
 }
 
-/*???˜¥?ðª?µE*/
+/*???ï¿½ï¿½?ï¿½?ï¿½E*/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .minisearch .field__search {
     margin: 45vh auto 0 !important;
@@ -28557,7 +28504,7 @@ ul.nav.nav-tabs > li {
   margin-right: 1rem;
 }
 
-/*date picker ?‘°ï¼ºË???ð§¢²???è¸?*/
+/*date picker ?ï¿½ï¿½ï¼ºï¿½???ð§¢²???ï¿½?*/
 @media (max-width: 767px) {
   .bootstrap-datetimepicker-widget.dropdown-menu {
     width: 100%;
@@ -28717,19 +28664,6 @@ a#scrollUp {
   content: "\e097";
 }
 
-@font-face {
-  font-family: "Socicon";
-  src: url("../fonts/Socicon.eot");
-  src: url("../fonts/Socicon.eot#iefix") format("embedded-opentype"),
-    url("../fonts/Socicon.woff2") format("woff2"),
-    url("../fonts/Socicon.ttf") format("truetype"),
-    url("../fonts/Socicon.woff") format("woff"),
-    url("../fonts/Socicon.svg#Socicon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 [class^="socicon-"],
 [class*=" socicon-"] {
   font-family: "Socicon" !important;
@@ -28868,7 +28802,7 @@ a#scrollUp {
   text-align: center;
 }
 
-/*?????‘±*/
+/*?????ï¿½ï¿½*/
 .wishlist-content td,
 .wishlist-content th {
   padding: 5px 5px;

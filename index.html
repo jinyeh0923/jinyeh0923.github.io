@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +18,8 @@
         href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,700;1,400&display=swap">
     <link rel="stylesheet" as="style"
         href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,700;1,400&amp;display=swap">
-    <link rel="stylesheet" href="vendor/fontawesome-5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="vendor/fontawesome-5.15.4/css/all.min.css"> -->
+    <link rel="stylesheet" href="vendor/fontawesome-6.4.0/css/all.min.css">
     <!-- remix icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.3.0/remixicon.min.css"
         integrity="sha512-tgAW/YyQHq3WCbO/Dcp7LYKKAJdCNEx1Faa0iOEygzQF1ylLv6JkBuZoVeFOqKPpsqToJC2KwUJJx+t8VQnYCg=="
@@ -28,6 +30,7 @@
     <link rel="stylesheet" href="css/style.css?ver=4">
     <!-- <link rel="stylesheet" href="css/mobile.css?ver=4"> -->
 </head>
+
 <body>
     <a href="" id="goTop"><i class="fas fa-arrow-up"></i></a>
     <header id="wn__header" class="version_menu_01 header__area header--fullwidth space-between">
@@ -126,11 +129,21 @@
                     <form onsubmit="sent_redirect=true" target="iframe_redirect" class=""
                         action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeKEJf-JJswSkgJpuChL1hCDSkzRJ0MVSVv0GuUMPTOMtqukQ/formResponse"
                         method="post" target="_self">
-                        <div>
+                        <div class="input_wrap">
                             <input type="text" placeholder="姓名" name="entry.1003508395">
                             <input type="email" name="" id="" placeholder="電子信箱" name="entry.1443993917">
-                            <input type="tel" id="" placeholder="手機" name="entry.1391185647">
-                            <input type="number " placeholder="預算" name="entry.182385642">
+                            <input type="tel" id="" placeholder="聯絡手機" name="entry.1391185647">
+                            <div class="custom_select">
+                                <select name="ok_time" id="ok_time" class="">
+                                    <option value="" disabled selected hidden>方便連絡時間</option>
+                                    <option value="0">不限時間</option>
+                                    <option value="1">早上09:00~中午12:00</option>
+                                    <option value="2">中午12:00~下午1:30</option>
+                                    <option value="3">下午1:30~下午5:00</option>
+                                    <option value="4">下午5:00~晚上8:00</option>
+                                </select>
+                            </div>
+                            <!-- <input type="number " placeholder="預算" name="entry.182385642"> -->
                             <textarea id="" cols="" rows="3" placeholder="有什麼想說的" name="entry.1724938495"></textarea>
                         </div>
                         <div class="form_info">
@@ -153,13 +166,16 @@
         <!-- insert footer -->
     </footer>
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="vendor/fontawesome-5.15.4/js/all.min.js"></script>
+    <!-- <script src="vendor/fontawesome-5.15.4/js/all.min.js"></script> -->
+    <script src="vendor/fontawesome-6.4.0/js/all.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/SmoothScroll.min.js"></script>
     <script src="js/script.js?ver=3"></script>
     <script src="js/filters.js?ver=4"></script>
+    <script src="js/custom_select.js?ver=4"></script>
     <script src="js/animation_new.js?ver=2"></script>
 </body>
+
 </html>

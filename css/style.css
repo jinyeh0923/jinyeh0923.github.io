@@ -19,6 +19,7 @@
 ::placeholder {
   color: var(--font--color);
   font-size: 0.8rem;
+  letter-spacing: 0.05rem;
 }
 
 :focus {
@@ -29,6 +30,12 @@
   padding: 0;
   width: 80%;
   margin: auto;
+}
+
+@media (max-width: 1300px) {
+  .header__area .container-fluid {
+    width: 85%;
+  }
 }
 
 #wrapper {
@@ -149,7 +156,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: bold;
   color: var(--bg-color1);
   z-index: 999;
@@ -197,20 +204,28 @@
 }
 
 .contact_wrap .contact_info .icon_circle {
-  padding: 5px 10px;
+  padding: 6px 10px;
   border-radius: 50%;
   background-color: var(--main-color3);
 }
 
 .contact_wrap .contact_info .icon_circle i {
-  /* font-size: 20px; */
+  font-size: 20px;
 }
 
 .contact_wrap .contact_form {
   width: 55%;
 }
 
+.input_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .contact_wrap .contact_form form input,
+.contact_wrap .contact_form form select,
 .contact_wrap .contact_form form textarea {
   background-color: transparent;
   padding: 15px;
@@ -226,6 +241,99 @@
 .contact_wrap .contact_form form input {
   width: 48%;
 }
+
+/* BEGIN customize select */
+select {
+  font-size: 0.8rem;
+  padding: 19.5px 0 !important;
+  text-indent: 15px !important;
+}
+
+select option {
+  font-size: 1px;
+  background-color: var(--bg-color1);
+  zoom: 1.2;
+}
+
+.custom_select {
+  width: 48%;
+  position: relative;
+}
+
+.custom_select select {
+  /*hide original SELECT element: */
+  display: none;
+  position: relative;
+}
+
+.select-selected {
+  position: relative;
+  z-index: 2;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  background-color: transparent;
+  padding: 18px 0;
+  text-indent: 20px;
+  margin: 20px 0;
+  outline: unset;
+  border-radius: 5px;
+  border: 1px solid var(--main-gray);
+  color: var(--font--color);
+  transition: 0.5s;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 23px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 12px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div {
+  color: #ffffff;
+  padding: 8px 20px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: transparent;
+  background-color: var(--bg-color2);
+  border-radius: 0 0 5px 5px;
+  top: 75px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+div.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--sub-color3);
+}
+
+/* END customize select */
 
 .contact_wrap .contact_form form textarea {
   width: 100%;
