@@ -78,6 +78,26 @@
   width: 100%;
 }
 
+/* alter img design */
+.banner {
+  padding: 10rem 0;
+}
+
+.banner .personal_info {
+  width: 40%;
+}
+.banner .profile {
+  width: 45%;
+}
+
+.profile .profile_pic {
+  width: 100%;
+}
+
+.banner .profile img {
+  width: 100%;
+}
+
 .profile .solid_circle {
   position: absolute;
   right: 0;
@@ -352,4 +372,43 @@ div.same-as-selected {
 
 .contact_wrap .contact_form form #send_data_button {
   width: 100%;
+}
+
+/* radio input */
+.radio_wrap {
+  width: 48%;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.radio_wrap div {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 30px; */
+}
+
+.radio_wrap div input {
+  width: auto !important;
+  margin: 10px 0 !important;
+}
+
+.radio_wrap div label {
+  margin-bottom: 0;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+/* input width */
+.input_3_wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input#name,
+input#phone {
+  flex: 1;
 }

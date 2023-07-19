@@ -49,8 +49,9 @@
             </div>
             <div class="profile">
                 <div class="profile_pic">
-                    <img src="img/profile.png" alt="profile">
-                    <div class="solid_circle"></div>
+                    <!-- <img src="img/profile.png" alt="profile"> -->
+                    <img src="img/undraw_building_websites_i78t.svg" alt="profile">
+                    <!-- <div class="solid_circle"></div> -->
                 </div>
 
             </div>
@@ -125,10 +126,22 @@
                     </div>
                     <form>
                         <div class="input_wrap">
-                            <input type="text" placeholder="姓名" id="name">
+                            <div class="input_3_wrap">
+                                <input type="text" placeholder="姓名" id="name">
+                                <div class="radio_wrap">
+                                    <div>
+                                        <input type="radio" id="mr" name="title" value="mr">
+                                        <label for="mr">先生</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="ms" name="title" value="ms">
+                                        <label for="ms">小姐</label>
+                                    </div>
+                                </div>
+                                <input type="tel" placeholder="聯絡手機" id="phone">
+                            </div>
                             <input type="email" placeholder="電子信箱" id="email">
-                            <input type="tel" placeholder="聯絡手機" id="phone">
-                            <!-- <div class="custom_select">
+                            <div class="custom_select">
                                 <select class="" name="entry.327004351">
                                     <option value="" disabled selected hidden>方便連絡時間</option>
                                     <option value="不限時間">不限時間</option>
@@ -137,7 +150,7 @@
                                     <option value="下午1:30~下午5:00">下午1:30~下午5:00</option>
                                     <option value="下午5:00~晚上8:00">下午5:00~晚上8:00</option>
                                 </select>
-                            </div> -->
+                            </div>
                             <textarea cols="" rows="3" placeholder="有什麼想說的" id="memo"></textarea>
                         </div>
                         <div class="form_info">
@@ -174,12 +187,20 @@
         $(function () {
             $('#send_data_button').on('click', function () {
                 var name = $('#name').val() || '未填寫';
+                var title = function () {
+                    var v;
+                    $('[name="title"]').each(function () {
+                        if ($(this).prop('checked') === true) v = $(this).val();
+                    });
+                    return v;
+                };
                 var email = $('#email').val() || '未填寫';
                 var phone = $('#phone').val() || '未填寫';
                 var memo = $('#memo').val() || '未填寫';
 
                 var data = {
                     'entry.1003508395': name,
+                    'entry.478094802': title(),
                     'entry.1443993917': email,
                     'entry.1391185647': phone,
                     'entry.1724938495': memo
