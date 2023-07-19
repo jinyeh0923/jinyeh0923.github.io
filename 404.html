@@ -25,10 +25,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/tiny_style.css">
-  <link rel="stylesheet" href="css/theme_new.css?ver=1">
-  <link rel="stylesheet" href="css/style.css?ver=1">
-  <link rel="stylesheet" href="css/style_error.css?ver=1">
-  <link rel="stylesheet" href="css/mobile.css?ver=1">
+  <link rel="stylesheet" href="css/theme_new.css?ver=2">
+  <link rel="stylesheet" href="css/style.css?ver=2">
+  <link rel="stylesheet" href="css/style_error.css?ver=2">
 </head>
 
 <body>
@@ -50,13 +49,18 @@
   </svg>
   <div class="message-box">
     <h1>404</h1>
-    <p>回頭是岸啊朋友。</p>
+    <p>你走太前面了啦。</p>
     <div class="buttons-con">
       <div class="action-link-wrap">
         <a onclick="history.back(-1)" class="btn btn-3"><span>回上一頁</span></a>
         <a href="index.html" class="btn btn-3"><span>前往首頁</span></a>
       </div>
-      <div class="logo_for_error"><img src="img/logo_right.png" alt=""></div>
+      <div class="logo_for_error">
+        <picture>
+          <source srcset="img/logo6.png" media="(max-width: 768px)" />
+          <img src="img/logo_right.png" alt="logo" />
+        </picture>
+      </div>
     </div>
   </div>
   <!-- partial -->
