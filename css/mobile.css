@@ -117,4 +117,8 @@
   .contact_wrap .contact_form form textarea {
     border: 2px solid var(--main-gray);
   }
+
+  footer {
+    flex-direction: column;
+  }
 }
