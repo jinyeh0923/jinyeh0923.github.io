@@ -48,6 +48,7 @@
   width: 80%;
   margin: auto;
   text-align: justify;
+  font-size: 1.1rem;
 }
 
 .banner {
@@ -56,45 +57,33 @@
   display: flex;
   justify-content: space-between;
   text-align: justify;
-  padding: 10rem 0 0;
+  padding: 9rem 0;
 }
 
 .banner .personal_info {
-  width: 40%;
+  width: 45%;
+  font-size: 1.2rem;
+}
+
+.banner .personal_info {
+  width: 45%;
 }
 
 .banner .profile {
-  text-align: center;
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
 }
 
 .profile .profile_pic {
-  width: 55%;
+  width: 100%;
   position: relative;
 }
 
 .profile img {
-  width: 100%;
-}
-
-/* alter img design */
-.banner {
-  padding: 10rem 0;
-}
-
-.banner .personal_info {
-  width: 40%;
-}
-.banner .profile {
-  width: 45%;
-}
-
-.profile .profile_pic {
-  width: 100%;
-}
-
-.banner .profile img {
   width: 100%;
 }
 
@@ -111,7 +100,7 @@
 
 .section1 {
   background-color: var(--bg-color2);
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .portfolio_wrap {
@@ -398,6 +387,7 @@ div.same-as-selected {
   margin-bottom: 0;
   padding-left: 10px;
   cursor: pointer;
+  font-size: 0.8rem;
 }
 
 /* input width */
