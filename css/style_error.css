@@ -1,20 +1,20 @@
 body {
   background-color: #19142a;
-  height: 100vh;
+  /* height: 100vh; */
 }
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0;
+  /* padding: 0; */
 }
 .footer {
-  display: none;
+  /* display: none; */
 }
 img {
   width: 100%;
 }
-svg {
+svg#svg_404 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -89,7 +89,7 @@ svg {
   }
 }
 @media (max-width: 768px) {
-  svg {
+  svg#svg_404 {
     position: absolute;
     top: 50%;
     left: 50%;

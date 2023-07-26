@@ -121,4 +121,21 @@
   footer {
     flex-direction: column;
   }
+  .footer_info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer_info a {
+    margin-right: 0;
+    margin: 15px 0;
+  }
+  .footer_info .icon_circle {
+    padding: 10px;
+  }
+  .footer_info i {
+    /* font-size: 1.2rem; */
+  }
+  .copyright {
+    width: 100%;
+  }
 }
