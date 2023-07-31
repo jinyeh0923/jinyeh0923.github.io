@@ -124,11 +124,17 @@
                     <div>
                         <h2>表單諮詢 Drop a line</h2>
                     </div>
-                    <form id="contact_form">
+                    <!-- window.location 是寫表單送出成功後要進到哪一個頁面 -->
+                    <iframe name="iframe_redirect" id="iframe_redirect" style="display:none;"
+                        onload="if(typeof sent_redirect!='undefined'){window.location='https://jinyeh0923.github.io/';}"></iframe>
+                    <form onsubmit="sent_redirect=true" target="iframe_redirect" class=""
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeKEJf-JJswSkgJpuChL1hCDSkzRJ0MVSVv0GuUMPTOMtqukQ/formResponse"
+                        method="post" target="_self">
                         <div class="input_wrap">
                             <div class="input_3_wrap">
-                                <input type="text" placeholder="姓名" id="name">
-                                <div class="radio_wrap">
+                                <input type="text" placeholder="姓名" id="name" name="entry.1003508395"
+                                    required="required">
+                                <!-- <div class="radio_wrap">
                                     <div>
                                         <input type="radio" id="mr" name="title" value="mr">
                                         <label for="mr">先生</label>
@@ -137,10 +143,12 @@
                                         <input type="radio" id="ms" name="title" value="ms">
                                         <label for="ms">小姐</label>
                                     </div>
-                                </div>
-                                <input type="tel" placeholder="聯絡手機" id="phone">
+                                </div> -->
+                                <input type="tel" placeholder="聯絡手機" id="phone" name="entry.1391185647"
+                                    required="required">
                             </div>
-                            <input type="email" placeholder="電子信箱" id="email">
+                            <input type="email" placeholder="電子信箱" id="email" name="entry.1443993917"
+                                required="required">
                             <!-- <div class="custom_select">
                                 <select class="" name="entry.327004351">
                                     <option value="" disabled selected hidden>方便連絡時間</option>
@@ -151,7 +159,8 @@
                                     <option value="下午5:00~晚上8:00">下午5:00~晚上8:00</option>
                                 </select>
                             </div> -->
-                            <textarea cols="" rows="3" placeholder="有什麼想說的" id="memo"></textarea>
+                            <textarea cols="" rows="3" placeholder="有什麼想說的" id="memo"
+                                name="entry.1724938495s"></textarea>
                         </div>
                         <div class="form_info">
                             <p>您所登錄的個人資料將做為以下用途</p>
@@ -162,7 +171,7 @@
                                     隱私權聲明</li>
                             </ol>
                         </div>
-                        <button type="button" name="" value="" id="send_data_button"
+                        <button type="submit" name="button" value="submit" id="send_data_button"
                             class="btn btn-3"><span>立即送出</span></button>
                     </form>
                 </div>
@@ -184,47 +193,6 @@
     <script src="js/filters.js?ver=3"></script>
     <script src="js/custom_select.js?ver=3"></script>
     <script src="js/animation_new.js?ver=3"></script>
-    <script>
-        $(function () {
-            $('#send_data_button').on('click', function () {
-                // $('form').on('submit', function (e) {
-                //在這裡我們要先擋掉form默認事件
-                // e.preventDefault();
-
-                var name = $('#name').val() || '未填寫';
-                var title = function () {
-                    var v;
-                    $('[name="title"]').each(function () {
-                        if ($(this).prop('checked') === true) v = $(this).val();
-                    });
-                    return v;
-                };
-                var email = $('#email').val() || '未填寫';
-                var phone = $('#phone').val() || '未填寫';
-                var memo = $('#memo').val() || '未填寫';
-
-                var data = {
-                    'entry.1003508395': name,
-                    'entry.478094802': title(),
-                    'entry.1443993917': email,
-                    'entry.1391185647': phone,
-                    'entry.1724938495': memo
-                };
-                $.ajax({
-                    type: 'POST',
-                    url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeKEJf-JJswSkgJpuChL1hCDSkzRJ0MVSVv0GuUMPTOMtqukQ/formResponse',
-                    //解決跨網域CORS的問題
-                    crossDomain: true,
-                    data: data,
-                    contentType: 'application/json',
-                    dataType: 'jsonp',
-                    complete: function () {
-                        alert('資料已送出！');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
