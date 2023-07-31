@@ -124,7 +124,7 @@
                     <div>
                         <h2>表單諮詢 Drop a line</h2>
                     </div>
-                    <form>
+                    <form id="contact_form">
                         <div class="input_wrap">
                             <div class="input_3_wrap">
                                 <input type="text" placeholder="姓名" id="name">
@@ -141,7 +141,7 @@
                                 <input type="tel" placeholder="聯絡手機" id="phone">
                             </div>
                             <input type="email" placeholder="電子信箱" id="email">
-                            <div class="custom_select">
+                            <!-- <div class="custom_select">
                                 <select class="" name="entry.327004351">
                                     <option value="" disabled selected hidden>方便連絡時間</option>
                                     <option value="不限時間">不限時間</option>
@@ -150,7 +150,7 @@
                                     <option value="下午1:30~下午5:00">下午1:30~下午5:00</option>
                                     <option value="下午5:00~晚上8:00">下午5:00~晚上8:00</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <textarea cols="" rows="3" placeholder="有什麼想說的" id="memo"></textarea>
                         </div>
                         <div class="form_info">
@@ -187,6 +187,10 @@
     <script>
         $(function () {
             $('#send_data_button').on('click', function () {
+                // $('form').on('submit', function (e) {
+                //在這裡我們要先擋掉form默認事件
+                // e.preventDefault();
+
                 var name = $('#name').val() || '未填寫';
                 var title = function () {
                     var v;
@@ -209,6 +213,8 @@
                 $.ajax({
                     type: 'POST',
                     url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeKEJf-JJswSkgJpuChL1hCDSkzRJ0MVSVv0GuUMPTOMtqukQ/formResponse',
+                    //解決跨網域CORS的問題
+                    crossDomain: true,
                     data: data,
                     contentType: 'application/json',
                     dataType: 'jsonp',
