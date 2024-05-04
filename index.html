@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<<<<<<< HEAD
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <meta http-equiv="Content-Security-Policy" content="frame-ancestors '*.google.com'">
+=======
+<!--     <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> -->
+>>>>>>> b19ce26240c725cc2c5c7a1533d0d9eb7050ec7a
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Jin Yeh</title>
     <meta name="description" content="">
@@ -126,33 +130,29 @@
                     <div>
                         <h2>表單諮詢 Drop a line</h2>
                     </div>
-                    <!-- window.location 是寫表單送出成功後要進到哪一個頁面 -->
-                    <iframe name="iframe_redirect" id="iframe_redirect" style="display:none;"
-                        onload="if(typeof sent_redirect!='undefined'){window.location='https://jinyeh0923.github.io/';}"></iframe>
-                    <form onsubmit="sent_redirect=true" target="iframe_redirect" class=""
-                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeKEJf-JJswSkgJpuChL1hCDSkzRJ0MVSVv0GuUMPTOMtqukQ/formResponse"
-                        method="post" target="_self">
+                    <form id="fs-frm" name="" accept-charset="utf-8" action="https://formspree.io/f/xpzgqdgp" method="post">
+                        <fieldset id="fs-frm-inputs">
                         <div class="input_wrap">
                             <div class="input_3_wrap">
-                                <input type="text" placeholder="姓名" id="name" name="entry.1003508395"
+                                <input type="text" placeholder="姓名" id="name" name="姓名"
                                     required="required">
-                                <!-- <div class="radio_wrap">
+                                <div class="radio_wrap">
                                     <div>
-                                        <input type="radio" id="mr" name="title" value="mr">
+                                        <input type="radio" id="mr" name="稱謂" value="先生">
                                         <label for="mr">先生</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="ms" name="title" value="ms">
+                                        <input type="radio" id="ms" name="稱謂" value="小姐">
                                         <label for="ms">小姐</label>
                                     </div>
-                                </div> -->
-                                <input type="tel" placeholder="聯絡手機" id="phone" name="entry.1391185647"
+                                </div>
+                                <input type="tel" placeholder="聯絡手機" id="phone" name="聯絡手機"
                                     required="required">
                             </div>
-                            <input type="email" placeholder="電子信箱" id="email" name="entry.1443993917"
+                            <input type="email" placeholder="電子信箱" id="email" name="電子信箱"
                                 required="required">
-                            <!-- <div class="custom_select">
-                                <select class="" name="entry.327004351">
+                            <div class="custom_select">
+                                <select class="" name="方便連絡時間">
                                     <option value="" disabled selected hidden>方便連絡時間</option>
                                     <option value="不限時間">不限時間</option>
                                     <option value="早上09:00~中午12:00">早上09:00~中午12:00</option>
@@ -160,9 +160,9 @@
                                     <option value="下午1:30~下午5:00">下午1:30~下午5:00</option>
                                     <option value="下午5:00~晚上8:00">下午5:00~晚上8:00</option>
                                 </select>
-                            </div> -->
+                            </div>
                             <textarea cols="" rows="3" placeholder="有什麼想說的" id="memo"
-                                name="entry.1724938495s"></textarea>
+                                name="留言"></textarea>
                         </div>
                         <div class="form_info">
                             <p>您所登錄的個人資料將做為以下用途</p>
@@ -175,6 +175,7 @@
                         </div>
                         <button type="submit" name="button" value="submit" id="send_data_button"
                             class="btn btn-3"><span>立即送出</span></button>
+                              </fieldset>
                     </form>
                 </div>
             </div>
