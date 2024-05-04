@@ -31,3 +31,17 @@ $(function () {
 //     toggleActions: "play",
 //     scroller: ".container"
 // });
+
+
+// 專案分類按鈕變色
+flag = false
+
+$(".filter_btn").on("click", function () {
+  if (flag == false) {
+    $(this).addClass('red_btn_clicked');
+    flag = true;
+  } else { 
+    $('.filter_btn').removeClass('red_btn_clicked');
+    $(this).addClass('red_btn_clicked');
+  }
+});

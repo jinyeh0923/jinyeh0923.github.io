@@ -430,6 +430,8 @@ button:focus {
   position: relative;
   padding: 0.6rem 0;
   min-width: 120px;
+  display: flex;
+  align-items: center;
 }
 
 /* #wn__header .logo a img { opacity: 0; } */
@@ -443,6 +445,12 @@ button:focus {
 
 #wn__header .logo a img:hover {
   filter: brightness(1.1);
+}
+
+#wn__header .logo a span {
+  letter-spacing: 0.1rem;
+  /* font-weight: bold; */
+  /* color: var(--sub-color3); */
 }
 
 @media (max-width: 1300px) {
@@ -2831,10 +2839,6 @@ button:focus {
   margin-right: 20px;
   font-weight: bold;
   font-size: 1.2rem;
-}
-
-#filter .filter {
-  /* flex: 1; */
 }
 
 #filter select.filter,
