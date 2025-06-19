@@ -1,0 +1,29 @@
+﻿<!-- footer -->
+<div class="footer">
+    <!-- <div class="footer_logo">
+        <a href="">
+            <picture>
+                <source media="(max-width: 991px)" srcset="img/logo6.png">
+                <img src="img/logo6.png" alt="Jin Yeh" title="Jin Yeh">
+            </picture>
+        </a>
+    </div> -->
+    <div class="footer_info">
+        <a href="tel:0905-046-657">
+            <span class="icon_circle"><i class="ri-phone-fill"></i></span><span>0905-046-657</span>
+        </a>
+        <a href="">
+            <span class="icon_circle"><i class="ri-mail-fill"></i></span><span>tonyyeh080586@gmail.com</span>
+        </a>
+        <a href="">
+            <span class="icon_circle"><i class="ri-instagram-fill"></i></span><span>tonyyeh080586</span>
+        </a>
+    </div>
+    <div class="copyright">Copyright © <span id="copyright-year"></span> 薯餅 Tony | All Rights Reserved</div>
+</div>
+
+
+<script>
+    //  auto update copyright year
+    document.querySelector('#copyright-year').innerText = new Date().getFullYear();
+</script>
